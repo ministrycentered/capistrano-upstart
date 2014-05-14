@@ -19,7 +19,7 @@ module Capistrano
 
           desc("Restart upstart service.")
           task(:restart, :roles => :app, :except => { :no_release => true }) {
-            find_and_execute_task("upstart:restart")
+            find_and_execute_task("upstart:reload")
           }
         }
 
